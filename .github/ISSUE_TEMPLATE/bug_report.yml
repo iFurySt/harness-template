@@ -1,0 +1,30 @@
+name: Bug Report
+description: Report a defect in the template or its default workflows.
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What broke?
+      description: Describe the observed behavior and expected behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Steps, commands, or minimal context needed to reproduce.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Explain who is affected and how severe the issue is.
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional context
+      description: Plans, histories, screenshots, logs, or related links.

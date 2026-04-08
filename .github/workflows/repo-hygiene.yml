@@ -1,0 +1,29 @@
+name: Repo Hygiene
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  repo-hygiene:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+
+      - name: Verify docs scaffold
+        run: ./scripts/check-docs.sh
+
+      - name: Verify repo hygiene
+        run: ./scripts/check-repo-hygiene.sh
+
+      - name: Shell syntax check
+        run: |
+          while IFS= read -r file; do
+            bash -n "$file"
+          done < <(find scripts -type f -name '*.sh' | sort)
+
+      - name: Markdown lint
+        uses: DavidAnson/markdownlint-cli2-action@992badcdf24e3b8eb7e87ff9287fe931bcb00c6e # v20
+        with:
+          globs: |
+            **/*.md
