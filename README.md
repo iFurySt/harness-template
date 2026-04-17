@@ -1,5 +1,7 @@
 # harness-template
 
+中文版本：[`harness-template-cn`](https://github.com/iFurySt/harness-template-cn)
+
 ## Intro
 
 An agent-first base repo template for building any product you want.
