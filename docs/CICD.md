@@ -5,7 +5,7 @@ This template ships with repository-level CI/CD scaffolding that is intentionall
 ## What Exists By Default
 
 - `ci.yml`: repository checks for docs, hygiene, markdown, and shell validity.
-- `supply-chain-security.yml`: dependency review, OSV scanning, SBOM generation, and Scorecard analysis.
+- `supply-chain-security.yml`: pull-request dependency review plus OSV scanning on pull requests, scheduled runs, and manual dispatch.
 - `release.yml`: a workflow-dispatch release scaffold that packages repository metadata, generates provenance attestations, and creates a GitHub release.
 
 ## Design Principle
@@ -18,7 +18,7 @@ All GitHub Actions in the workflows are pinned to commit SHAs. Keep that propert
 
 ## Recommended Customization Sequence
 
-1. Keep `ci.yml` as the always-on repository gate.
+1. Keep `ci.yml` as the only always-on repository gate.
 2. Extend `scripts/ci.sh` with project-specific verification.
 3. Replace `scripts/release-package.sh` with the real build or publish packaging logic.
 4. Add environment-specific deployment jobs after a real runtime and target environment exist.

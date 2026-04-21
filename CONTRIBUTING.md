@@ -11,7 +11,7 @@ This repository is designed for agent-first development, but the same rules appl
 
 ## Before Opening A Pull Request
 
-- Run `make check-docs`.
+- Run `make ci`.
 - Add or update a history entry if the task changed repository code or workflow.
 - Update release notes when the change is user-visible.
 - Verify examples and scripts still match the current behavior.

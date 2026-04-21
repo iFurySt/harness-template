@@ -12,8 +12,8 @@ Clone it or fork it, then use it as the starting point for whatever service, pro
 
 ## License
 
-[MIT](/Users/bytedance/projects/github/harness-template/LICENSE)
+[MIT](LICENSE)
 
 ## Note
 
-This approach comes from our own exploration, while also drawing on some ideas from OpenAI's harness engineering write-up: https://openai.com/index/harness-engineering/
+This approach comes from our own exploration, while also drawing on some ideas from OpenAI's [harness engineering write-up](https://openai.com/index/harness-engineering/).

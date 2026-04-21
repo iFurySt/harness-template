@@ -5,10 +5,9 @@ This document defines the default supply-chain posture for the template.
 ## Default Controls
 
 - Dependency diff review on pull requests.
-- Vulnerability scanning with OSV on the checked-in dependency manifests and lockfiles present in the repo.
+- Vulnerability scanning with OSV on pull requests, scheduled runs, and manual dispatch.
 - SBOM generation for release artifacts.
 - Build provenance attestations for published release artifacts.
-- OpenSSF Scorecard analysis for repository-level security posture.
 - GitHub Actions pinned to immutable commit SHAs instead of floating tags.
 
 ## Current Workflow Mapping
@@ -17,7 +16,6 @@ This document defines the default supply-chain posture for the template.
 - `google/osv-scanner-action`: scans the repository for known-vulnerable dependencies based on supported manifests and lockfiles.
 - `anchore/sbom-action`: generates an SPDX SBOM artifact.
 - `actions/attest-build-provenance`: generates signed build provenance for release artifacts.
-- `ossf/scorecard-action`: evaluates repository-level security signals such as branch protection and token permissions.
 - `scripts/check-action-pinning.sh`: fails CI if workflow actions are referenced by floating tags instead of immutable SHAs.
 
 ## Limits And Assumptions
@@ -25,7 +23,7 @@ This document defines the default supply-chain posture for the template.
 - Dependency Review is available for public repositories and private repositories with GitHub Advanced Security.
 - OSV and SBOM quality depend on the project checking in recognizable manifests or lockfiles.
 - Provenance is only meaningful once `scripts/release-package.sh` represents the real build output of the project.
-- Scorecard results are strongest when repository rules, branch protection, and signed/reviewed workflows are actually configured.
+- OpenSSF Scorecard is intentionally not enabled by default because a new template repository has no real branch protection, release history, or SAST posture to score. Add it back after repository rules are configured.
 
 ## What To Do When The Project Becomes Real
 

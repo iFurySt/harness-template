@@ -17,8 +17,6 @@ required_files=(
   ".github/ISSUE_TEMPLATE/feature_request.yml"
   ".github/ISSUE_TEMPLATE/config.yml"
   ".github/workflows/ci.yml"
-  ".github/workflows/docs-check.yml"
-  ".github/workflows/repo-hygiene.yml"
   ".github/workflows/release.yml"
   ".github/workflows/supply-chain-security.yml"
   ".markdownlint.json"
@@ -39,8 +37,8 @@ if grep -q $'\r' "${repo_root}/README.md"; then
   failed=1
 fi
 
-if ! grep -q "make check-docs" "${repo_root}/CONTRIBUTING.md"; then
-  echo "CONTRIBUTING.md should mention make check-docs"
+if ! grep -q "make ci" "${repo_root}/CONTRIBUTING.md"; then
+  echo "CONTRIBUTING.md should mention make ci"
   failed=1
 fi
 

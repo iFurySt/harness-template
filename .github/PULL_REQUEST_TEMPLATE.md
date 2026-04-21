@@ -5,7 +5,7 @@
 
 ## Validation
 
-- [ ] `make check-docs`
+- [ ] `make ci`
 - [ ] Relevant tests or manual verification completed
 - [ ] Docs updated if behavior changed
 - [ ] History entry added or updated if this changed code/workflow
