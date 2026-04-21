@@ -34,9 +34,9 @@ Describe the desired end state in one paragraph.
 
 ## Progress Log
 
-- [ ] Milestone 1
-- [ ] Milestone 2
-- [ ] Milestone 3
+- [ ] Example: confirm scope and constraints.
+- [ ] Example: implement the first planned slice.
+- [ ] Example: run validation and record results.
 
 ## Decision Log
 
