@@ -8,7 +8,16 @@ An agent-first base repo template for building any product you want.
 
 ## Quick Start
 
-Clone it or fork it, then use it as the starting point for whatever service, product, or platform you want to build.
+Use GitHub's template flow from the top right of this repository:
+
+1. Select **Use this template**.
+2. Select [**Create a new repository**](https://github.com/new?template_name=harness-template&template_owner=iFurySt).
+
+Or initialize a new or existing repository with `harness-cli`:
+
+```sh
+harness-cli init --language en
+```
 
 ## License
 
