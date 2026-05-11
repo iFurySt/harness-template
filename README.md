@@ -28,6 +28,21 @@ harness-cli init --language en
 
 `harness-cli` requires Node.js 18+ and Go on your `PATH`.
 
+## What You Get
+
+- Agent entry points through `AGENTS.md` and `CLAUDE.md`.
+- Repository-local docs for architecture, product sense, frontend, reliability, security, CI/CD, and supply-chain posture.
+- Execution-plan, change-history, release-note, and reference-doc scaffolding under `docs/`.
+- Baseline CI, release, and supply-chain security workflows with pinned GitHub Actions.
+- Small scripts and `make` targets for repo checks, histories, plans, and template initialization.
+
+## First 10 Minutes
+
+1. Replace template placeholders such as `CODEOWNERS`, `docs/ARCHITECTURE.md`, and `docs/product-specs/`.
+2. Run `make ci` and keep it as the baseline command agents should use before opening a PR.
+3. Add the first real product workflow and acceptance criteria before expanding implementation.
+4. Update `docs/QUALITY_SCORE.md` with the weakest areas of the new project so future work has a map.
+
 ## License
 
 [MIT](LICENSE)
